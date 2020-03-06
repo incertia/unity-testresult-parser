@@ -1,11 +1,11 @@
 name:           unity-testresult-parser
-version:        0.1.0.1
+version:        0.1.0.2
 description:    Unity3D TestResults parser
 homepage:       https://github.com/incertia/unity-testresult-parser#readme
 bug-reports:    https://github.com/incertia/parser/issues
 author:         Will Song
 maintainer:     incertia@incertia.net
-copyright:      2018 incertia
+copyright:      2020 incertia
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple

@@ -19,9 +19,11 @@ import SGR                  (success, fail, unknown, info, reset)
 data AggregateResult = AggregateResult Int Int Int
   deriving (Show, Eq)
 
+instance Semigroup AggregateResult where
+  AggregateResult a b c <>AggregateResult a' b' c' =
+    AggregateResult (a + a') (b + b') (c + c')
+
 instance Monoid AggregateResult where
-  AggregateResult a b c `mappend` AggregateResult a' b' c' = newresult
-    where newresult = AggregateResult (a + a') (b + b') (c + c')
   mempty = AggregateResult 0 0 0
 
 -- parses a list of files and prints out a total summary
