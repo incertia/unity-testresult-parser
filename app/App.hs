@@ -8,6 +8,8 @@ import Control.Exception    (try)
 import Control.Monad        (when, unless)
 import Control.Monad.Reader (MonadReader, asks)
 import Control.Monad.Trans  (MonadIO, liftIO)
+import Data.Monoid          (Monoid(..))
+import Data.Semigroup       (Semigroup(..))
 import Data.Text            (pack, unpack)
 
 import Config               (Config(..))
@@ -20,11 +22,12 @@ data AggregateResult = AggregateResult Int Int Int
   deriving (Show, Eq)
 
 instance Semigroup AggregateResult where
-  AggregateResult a b c <>AggregateResult a' b' c' =
+  AggregateResult a b c <> AggregateResult a' b' c' =
     AggregateResult (a + a') (b + b') (c + c')
 
 instance Monoid AggregateResult where
-  mempty = AggregateResult 0 0 0
+  mappend = (<>)
+  mempty  = AggregateResult 0 0 0
 
 -- parses a list of files and prints out a total summary
 parseFiles :: (MonadIO m, MonadReader Config m) => [String] -> m Bool

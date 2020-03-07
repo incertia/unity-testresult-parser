@@ -1,5 +1,5 @@
 name:           unity-testresult-parser
-version:        0.1.0.3
+version:        0.1.0.4
 description:    Unity3D TestResults parser
 homepage:       https://github.com/incertia/unity-testresult-parser#readme
 bug-reports:    https://github.com/incertia/parser/issues
@@ -27,6 +27,7 @@ library
       base >=4.9 && <5
     , containers
     , optparse-applicative
+    , semigroups
     , text
     , unordered-containers
     , xml-conduit
