@@ -24,7 +24,7 @@ library
   default-extensions:
       OverloadedStrings
   build-depends:
-      base >=4.9 && <5
+      base >=4.3 && <5
     , containers
     , optparse-applicative
     , semigroups
