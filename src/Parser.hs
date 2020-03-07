@@ -10,14 +10,15 @@ module Parser
   , stackTrace
   ) where
 
-import Prelude hiding      (lookup)
+import Prelude hiding (lookup)
 
-import Data.Map            (lookup)
-import Data.Maybe          (fromMaybe)
-import Data.Text           (pack, unpack, Text, append, strip)
-import Text.XML            (parseText, def, documentRoot, Element(Element),
-                            nameLocalName, Node(NodeContent, NodeElement),
-                            Name(Name))
+import Data.Functor   ((<$>))
+import Data.Map       (lookup)
+import Data.Maybe     (fromMaybe)
+import Data.Text      (pack, unpack, Text, append, strip)
+import Text.XML       (parseText, def, documentRoot, Element(Element),
+                       nameLocalName, Node(NodeContent, NodeElement),
+                       Name(Name))
 
 import qualified Data.Text.Lazy as L
 
