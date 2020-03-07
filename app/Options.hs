@@ -8,7 +8,9 @@ module Options
   ) where
 
 import Control.Applicative
-  (many)
+  (many, (<*>))
+import Data.Functor
+  ((<$>))
 import Data.List.Split
   (splitOn)
 import Data.Monoid
