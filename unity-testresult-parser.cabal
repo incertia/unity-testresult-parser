@@ -1,5 +1,5 @@
 name:           unity-testresult-parser
-version:        0.1.0.8
+version:        0.1.0.9
 description:    Unity3D TestResults parser
 homepage:       https://github.com/incertia/unity-testresult-parser#readme
 bug-reports:    https://github.com/incertia/parser/issues

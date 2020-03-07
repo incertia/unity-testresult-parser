@@ -14,7 +14,9 @@ import Data.Functor
 import Data.List.Split
   (splitOn)
 import Data.Monoid
-  ((<>), mempty)
+  (mempty)
+import Data.Semigroup
+  ((<>))
 import Data.Text
   (pack, unpack, strip)
 import Options.Applicative
