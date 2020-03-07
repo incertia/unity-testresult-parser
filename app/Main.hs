@@ -1,5 +1,6 @@
 module Main where
 
+import Control.Applicative  (pure)
 import Control.Monad.Reader (runReaderT)
 import Options.Applicative  (execParser)
 import System.Exit          (exitWith, exitSuccess, ExitCode(ExitFailure))
